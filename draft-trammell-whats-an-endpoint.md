@@ -1,5 +1,5 @@
 ---
-title: What is an endpoint?
+title: What is an endpoint
 abbrev: Endpoint
 docname: draft-trammell-whats-an-endpoint-latest
 date: 2017-05-23
@@ -58,6 +58,11 @@ Definitions
 ===========
 
 write me -- endpoint is identity with intent etc etc
+
+Host Requirements Considered Harmful
+====================================
+
+go ted go
 
 Illustrations
 =============
