@@ -41,8 +41,6 @@ normative:
 informative:
   RFC5389:
 
-
-
 --- abstract
 
 what is an endpoint
