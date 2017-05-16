@@ -24,7 +24,7 @@ author:
     name: Martin Thomson
     org: Mozilla
     email: martin.thomson@gmail.com
-- 
+-
     ins: L. Howard
     name: Lee Howard
     org: Retevia
