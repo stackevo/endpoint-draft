@@ -36,10 +36,7 @@ author:
     email: ted.ietf@gmail.com
 
 normative:
-  RFC2119:
-
-informative:
-  RFC5389:
+  RFC1122:
 
 --- abstract
 
