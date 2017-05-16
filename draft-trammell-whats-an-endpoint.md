@@ -14,22 +14,22 @@ stand_alone: yes
 pi: [toc, sortrefs, symrefs]
 
 author:
- -
+  -
     ins: B. Trammell
     name: Brian Trammell
     organization: ETH Zurich
     email: ietf@trammell.ch
- -
+  -
     ins: M. Thomson
     name: Martin Thomson
     org: Mozilla
     email: martin.thomson@gmail.com
--
+  -
     ins: L. Howard
     name: Lee Howard
     org: Retevia
     email: lee.howard@retevia.net
--
+  -
     ins: T. Hardie
     name: Ted Hardie
     org: Google
