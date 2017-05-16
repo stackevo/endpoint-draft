@@ -10,3 +10,5 @@
 venv/
 issues.json
 pulls.json
+lib
+draft-trammell-whats-an-endpoint.xml
