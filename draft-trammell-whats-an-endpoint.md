@@ -1,6 +1,6 @@
 ---
 title: What is an endpoint
-abbrev: Endpoint
+abbrev: Endpoints
 docname: draft-trammell-whats-an-endpoint-latest
 date: 2017-05-23
 category: info
