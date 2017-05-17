@@ -47,12 +47,34 @@ what is an endpoint
 Introduction
 ============
 
-write me
+As articulated in RFC1958, "Architectural Principles of the Internet:"
+  
+     It is also generally felt that end-to-end functions can best be realised by end-to-end protocols.
+
+This statement can only be applied if one can determine what an "end" is.
+
+ see Joe Touch’s UDP tunnels draft 
+ Dave Clark's end-to-end principle, 
+ draft-dolson-plus-middlebox-benefits)
+Implications of “transport endpoint” being different than “application endpoint” being different from “security identity”	
+	IoT, Server clusters. Application process != host
+	To the app, the other end is maybe a hostname, or maybe a process, or maybe a socket API.
+	But the layered architecture is a strength. You shouldn’t care about the other end, as long as you can rely on the system when you hand off to the next layer.
+	Is it as simple as saying, “The L3 endpoint is one thing, the L4 endpoint is another thing, . . . the L7 endpoint is another thing.” And if so, the L8 endpoint?
 
 Definitions
 ===========
 
 write me -- endpoint is identity with intent etc etc
+1. Security endpoint. The point at which a protocol establishing trust is terminated. This may be the point on a web system where a certificate is applied, for example, or the point where an SSH session terminates.
+2. Internet endpoint. The point at which the Internet protocol (address, header) is added or removed, but not the point where it is changed. Therefore, a NAT operation (including NAT64, etc.) is not an Internet endpoint, but a Back-to-Back User Agent (B2BUA) is, and a web proxy is. [DISCUSS]
+3. Application endpoint. What a quaint notion!
+(continue)
+
+From these specific definitions, one can generalize to the statement:
+An endpoint is that function that identifies itself as the target of communication.
+
+Thus, an application endpoint is the process that receives communication from an application and begins processing it. A network endpoint is the process (or more loosely, a device) that receives a network packet and processes it. A security endpoint is the process that responds to communication about security. 
 
 Host Requirements Considered Harmful
 ====================================
