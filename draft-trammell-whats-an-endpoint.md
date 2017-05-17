@@ -35,8 +35,9 @@ author:
     org: Google
     email: ted.ietf@gmail.com
 
-normative:
+informative:
   RFC1122:
+  RFC1958:
 
 --- abstract
 
@@ -47,20 +48,33 @@ what is an endpoint
 Introduction
 ============
 
-write me
+The Internet provides connectivity between endpoints
 
-Definitions
-===========
+"It is... generally felt that end-to-end functions can best be realised by end-to-end protocols." {{RFC1958}}
 
-write me -- endpoint is identity with intent etc etc
+An endpoint is defined to be synonymous with a host in {{RFC1122}}, and is taken to be anything that meets the requirements specified therein.
+
+This implicit definition is inadequate for reasons.
+
+We present a new one, and the rationale behind it, for reasons.
+
+Definition
+==========
+
+one-sentence definition goes here, then explain it.
+
+two key concepts: identity and intent. identity is addressing + authentication. intent is either intent to initiate or to accept communication using some protocol for some purpose. point out that both identiy identity binds more readily to process than to host. 
+
+layering and tunneling: yep.
 
 Host Requirements Considered Harmful
-====================================
+------------------------------------
 
 go ted go
 
 Illustrations
 =============
+
 
 Content Distribution Networks
 -----------------------------
