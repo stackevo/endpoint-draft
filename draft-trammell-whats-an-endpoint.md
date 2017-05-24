@@ -35,8 +35,9 @@ author:
     org: Google
     email: ted.ietf@gmail.com
 
-normative:
+informative:
   RFC1122:
+  RFC1958:
 
 --- abstract
 
@@ -62,8 +63,15 @@ Implications of “transport endpoint” being different than “application end
 	But the layered architecture is a strength. You shouldn’t care about the other end, as long as you can rely on the system when you hand off to the next layer.
 	Is it as simple as saying, “The L3 endpoint is one thing, the L4 endpoint is another thing, . . . the L7 endpoint is another thing.” And if so, the L8 endpoint?
 
-Definitions
-===========
+On the other hand, an endpoint is defined to be synonymous with a host in {{RFC1122}}, and is taken to be anything that meets the requirements specified therein.
+
+This implicit definition is inadequate for reasons.
+
+We present a new one, and the rationale behind it, for reasons.
+
+Definition
+==========
+
 
 write me -- endpoint is identity with intent etc etc
 1. Security endpoint. The point at which a protocol establishing trust is terminated. This may be the point on a web system where a certificate is applied, for example, or the point where an SSH session terminates.
@@ -77,12 +85,13 @@ An endpoint is that function that identifies itself as the target of communicati
 Thus, an application endpoint is the process that receives communication from an application and begins processing it. A network endpoint is the process (or more loosely, a device) that receives a network packet and processes it. A security endpoint is the process that responds to communication about security. 
 
 Host Requirements Considered Harmful
-====================================
+------------------------------------
 
 go ted go
 
 Illustrations
 =============
+
 
 Content Distribution Networks
 -----------------------------
