@@ -69,7 +69,7 @@ networks that came before it, as well as the architectures of some networks over
 Internet access is provided. It is often referred to in shorthand in the IETF as
 "smart endpoints, dumb middles".
 
-Teaffirming this principle requires us to re-examine what an endpoint is, however,
+Reaffirming this principle requires us to re-examine what an endpoint is, however,
 as there has been significant evolution in the distribution of the functions from which
 systems using the network are comprised. Early in the design of the Internet, a 
 network-layer endpoint was synonymous with a host, and a transport-layer endpoint was 
