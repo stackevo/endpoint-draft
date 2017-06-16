@@ -65,23 +65,23 @@ Introduction
 This is an articulation of the end-to-end argument {{Saltzer84}}, which pervades
 the architecture of the Internet, and is a key differentiator between the
 Internet architecture and the architectures of electronic communications
-networks that came before it, and the architectures of some networks over which
+networks that came before it, as well as the architectures of some networks over which
 Internet access is provided. It is often referred to in shorthand in the IETF as
 "smart endpoints, dumb middles".
 
-We observe that this principle can only be applied, however, when one has
-agreement on what an endpoint is. Early in the design of the Internet, this
-agreement was relatively obvious: a network-layer endpoint was synonymous with a
-host, and a transport-layer endpoint was synonymous with a process running on a
-host. 
+Reaffirming this principle requires us to re-examine what an endpoint is, however,
+as there has been significant evolution in the distribution of the functions from which
+systems using the network are comprised. Early in the design of the Internet, a 
+network-layer endpoint was synonymous with a host, and a transport-layer endpoint was 
+synonymous with a process running on a host. 
 
-The architecture of the Internet is necessarily descriptive. It should be as
-simple as possible but not simpler. Changes in the Internet through several
-decades of development and changing deployment models requires re-evaluating
-assumptions, including those of simplicity. This draft aims to rectify the
-proposes a generalized definition of an endpoint, then explores how it can be
-applied to understanding the architecture of the Internet, specifically
-[EDITOR'S NOTE: list controversies here].
+Changes in the Internet through several decades of development and deployment have complicated
+matters.  Many servers now use load balancers, front-end compositors and back-end data stores as
+component network end points; some clients, especially in the case of IoT systems, are actually
+clusters of devices connected by a gateway.  This draft aims to roposes a new, generalized
+definition of an endpoint, that recognizes those changes.  It will then explore how it can be
+applied to understanding the architecture of the Internet.
+
 
 Host Requirements Considered Harmful
 ------------------------------------
