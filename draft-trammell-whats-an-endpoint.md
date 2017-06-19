@@ -76,8 +76,8 @@ synonymous with a process running on a host.
 Changes in the Internet through several decades of development and deployment have complicated
 matters.  Many servers now use load balancers, front-end compositors and back-end data stores as
 component network end points; some clients, especially in the case of IoT systems, are actually
-clusters of devices connected by a gateway.  This draft aims to roposes a new, generalized
-definition of an endpoint, that recognizes those changes.  It will then explore how it can be
+clusters of devices connected by a gateway.  This draft aims to proposes a new, generalized
+definition of an endpoint that recognizes those changes.  It will then explore how it can be
 applied to understanding the architecture of the Internet.
 
 
