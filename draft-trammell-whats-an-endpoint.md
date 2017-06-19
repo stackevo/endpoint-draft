@@ -2,12 +2,10 @@
 title: What Is an Endpoint?
 abbrev: Endpoints
 docname: draft-trammell-whats-an-endpoint-latest
-date:
 category: info
 
 ipr: trust200902
-area: General
-workgroup: XMPP Working Group
+workgroup: Stack Evolution Program
 keyword: Internet-Draft
 
 stand_alone: yes
@@ -59,8 +57,8 @@ Introduction
 ============
 
 "Architectural Principles of the Internet"  {{RFC1958}} states:
-  
-     It is also generally felt that end-to-end functions can best be realised by end-to-end protocols.
+
+> It is also generally felt that end-to-end functions can best be realised by end-to-end protocols.
 
 This is an articulation of the end-to-end argument {{Saltzer84}}, which pervades
 the architecture of the Internet, and is a key differentiator between the
@@ -71,22 +69,22 @@ Internet access is provided. It is often referred to in shorthand in the IETF as
 
 Reaffirming this principle requires us to re-examine what an endpoint is, however,
 as there has been significant evolution in the distribution of the functions from which
-systems using the network are comprised. Early in the design of the Internet, a 
-network-layer endpoint was synonymous with a host, and a transport-layer endpoint was 
-synonymous with a process running on a host. 
+systems using the network are comprised. Early in the design of the Internet, a
+network-layer endpoint was synonymous with a host, and a transport-layer endpoint was
+synonymous with a process running on a host.
 
 Changes in the Internet through several decades of development and deployment have complicated
 matters.  Many servers now use load balancers, front-end compositors and back-end data stores as
 component network end points; some clients, especially in the case of IoT systems, are actually
-clusters of devices connected by a gateway.  This draft aims to roposes a new, generalized
-definition of an endpoint, that recognizes those changes.  It will then explore how it can be
+clusters of devices connected by a gateway.  This draft aims to proposes a new, generalized
+definition of an endpoint that recognizes those changes.  It will then explore how it can be
 applied to understanding the architecture of the Internet.
 
 
 Host Requirements Considered Harmful
 ------------------------------------
 
-[EDITOR'S NOTE: go ted go]
+\[EDITOR'S NOTE: go ted go]
 
 One reading of the relevant standards is that an endpoint is defined to be synonymous with a host in {{RFC1122}}, and is taken to be anything that meets the requirements specified therein...
 
@@ -94,26 +92,26 @@ One reading of the relevant standards is that an endpoint is defined to be synon
 Definition
 ==========
 
-[EDITOR'S NOTE: This is from Brian's message.]
+\[EDITOR'S NOTE: This is from Brian's message.]
 
-An endpoint is a necessarily-stateful interface between "the network" (for some definition of "the network") and the entity the network provides communication on behalf of (a user, an application, a device, a service, etc.) This entity is associated with some identity (which may be cryptographically verifiable) and some intent to communicate with some other endpoint(s). 
+An endpoint is a necessarily-stateful interface between "the network" (for some definition of "the network") and the entity the network provides communication on behalf of (a user, an application, a device, a service, etc.) This entity is associated with some identity (which may be cryptographically verifiable) and some intent to communicate with some other endpoint(s).
 
-[EDITOR'S NOTE: This is from Lee's Montreal commit. We should take elements of one or both of these and turn it into the snappy one-liner. Lee's current one-liner is snappier but I think too restricted...]
+\[EDITOR'S NOTE: This is from Lee's Montreal commit. We should take elements of one or both of these and turn it into the snappy one-liner. Lee's current one-liner is snappier but I think too restricted...]
 
 1. Security endpoint. The point at which a protocol establishing trust is terminated. This may be the point on a web system where a certificate is applied, for example, or the point where an SSH session terminates.
-2. Internet endpoint. The point at which the Internet protocol (address, header) is added or removed, but not the point where it is changed. Therefore, a NAT operation (including NAT64, etc.) is not an Internet endpoint, but a Back-to-Back User Agent (B2BUA) is, and a web proxy is. [DISCUSS]
+2. Internet endpoint. The point at which the Internet protocol (address, header) is added or removed, but not the point where it is changed. Therefore, a NAT operation (including NAT64, etc.) is not an Internet endpoint, but a Back-to-Back User Agent (B2BUA) is, and a web proxy is. \[DISCUSS]
 3. Application endpoint. What a quaint notion!
 (continue)
 
 From these specific definitions, one can generalize to the statement:
 An endpoint is that function that identifies itself as the target of communication.
 
-[EDITOR'S NOTE: Introduce subsections]
+\[EDITOR'S NOTE: Introduce subsections]
 
 Statefulness
 ------------
 
-[EDITOR'S NOTE: Aaron's comment on the March thread]
+\[EDITOR'S NOTE: Aaron's comment on the March thread]
 
 An endpoint is where application state lives. For lower layer protocols, the
 Internet is generally in service to applications, to hand data to an application
@@ -127,7 +125,7 @@ sharing) may no longer be valid.
 Layering
 --------
 
-[EDITOR'S NOTE: from Lee's commit]
+\[EDITOR'S NOTE: from Lee's commit]
 
 an application endpoint is the process that receives communication from an
 application and begins processing it. A network endpoint is the process (or more
@@ -136,9 +134,9 @@ endpoint is the process that responds to communication about security.
 
 Implications of “transport endpoint” being different than “application endpoint”
 being different from “security identity”
-	
+
 IoT, Server clusters. Application process != host
-	
+
 To the app, the other end is maybe a hostname, or maybe a process, or maybe a socket API.
 
 But the layered architecture is a strength. You shouldn’t care about the other
@@ -152,7 +150,7 @@ endpoint?
 Identity
 --------
 
-[EDITOR'S NOTE: Eliot's comment from the March thread]
+\[EDITOR'S NOTE: Eliot's comment from the March thread]
 
 An endpoint consists of a set of components bound together through a single
 identity, through which those components are controlled.  It's an interesting
@@ -163,15 +161,15 @@ endpoints.
 Intent and Semantics
 --------------------
 
-[EDITOR'S NOTE: from Natasha]
+\[EDITOR'S NOTE: from Natasha]
 
 An endpoint is the closest element to the actor in a use case.
 
-[EDITOR'S NOTE: from Joe]
+\[EDITOR'S NOTE: from Joe]
 
 An endpoint either initiates network communications or acts as the intended target for such initiations... If the initiator knowingly chose to use a b2bua based on configuration or discovery, then I'd say it was an endpoint.  If it was something the path injected into the flow without user or user-agent awareness, it's not an endpoint.  I think intent of the UA is interesting.
 
-[EDITOR'S NOTE: from Gabriel]
+\[EDITOR'S NOTE: from Gabriel]
 
 An endpoint is a participant in a semantic dialog.
 
@@ -179,9 +177,9 @@ An endpoint is a participant in a semantic dialog.
 Distribution
 ------------
 
-[EDITOR'S NOTE: This is from Ted's comment on the 14.6. IAB call. Clean this up a bit.]
+\[EDITOR'S NOTE: This is from Ted's comment on the 14.6. IAB call. Clean this up a bit.]
 
-The cooperative middlebox, if you have a split server where the server is doing some of the work at the front and some at a series of backends. Might be as far in as the thing that serves the actual data. In QUIC you have this model where if you try and say the end points are talking to each other, you're collapsing a bunch of cooperative systems into something called an end point. But we've traditionally thought of services as client to server or endpoint to endpoint, but that may be too simple. Some of the endpoint people in the IOT space may not see the mirroring, so I think the 00 will be useful for saying this is happening at both ends. 
+The cooperative middlebox, if you have a split server where the server is doing some of the work at the front and some at a series of backends. Might be as far in as the thing that serves the actual data. In QUIC you have this model where if you try and say the end points are talking to each other, you're collapsing a bunch of cooperative systems into something called an end point. But we've traditionally thought of services as client to server or endpoint to endpoint, but that may be too simple. Some of the endpoint people in the IOT space may not see the mirroring, so I think the 00 will be useful for saying this is happening at both ends.
 
 
 Illustrations
@@ -212,4 +210,3 @@ Other Sources
 
 - Joe Touch's UDP Tunnels draft
 - Anything to take from Dave Dolson's draft on what middleboxes do?
-
